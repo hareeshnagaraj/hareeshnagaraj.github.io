@@ -261,6 +261,7 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1140px;
+    color:rgb(52,52,52);
 }
 
 a {
@@ -472,7 +473,7 @@ header .buttons-wrapper .button-stripe {
 
 .header-wrapper {
     padding-top: 87px;
-    max-width: 655px;
+    max-width: 500px;
 }
 
 /* footer --------------------------  */
