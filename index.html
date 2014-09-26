@@ -4,14 +4,7 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico">
     <title>Hareesh Nagaraj</title>
-    <meta name="description" content="A free responsive HTML 5 template with a clean style.">
-    <meta name="keywords" content="free template, html 5, responsive, clean, scss">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/touch/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/touch/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/touch/apple-touch-icon-144x144.png">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:url" content="">
@@ -23,6 +16,7 @@
         <script src="js/html5.js"></script>
         <script src="js/respond.js"></script>
     <![endif]-->
+
 </head>
 <body class="no-js">
     <div class="main">
@@ -33,19 +27,19 @@
                     <h1>Hareesh Nagaraj</h1>
                     <p>I'm a developer, musician, and life enthusiast currently studying Computer Science at the College of William & Mary. I've been known to make apps, websites, and guitar solos.</p>
                     <div class="buttons-wrapper">
-                        <a href="#" class="button button-stripe">Learn more</a>
+                        <a id="more" class="button button-stripe">Learn more</a>
                     </div>
                 </div>
                 <!-- /.header-wrapper -->
             </div>
             <!-- /.wrap -->
         </header>
-        <div class="comments clearfix">
-                <div class="wrap">
+        <div id="about" class="comments clearfix">
+                <div  class="wrap">
                     <div class="tab">
                         <div class="box visible" style="color:white;">
                             <h4>About Me</h4>
-                            <p style="text-align:left;">I consider myself a composer - I love making things more than anything else. The process of creation, making something from nothing, is something that has always fascinated me. While learning to play guitar when I was younger, I always found myself writing my own songs more than anything else. Learning to code, I found the same appeal. To me, the similarities are boundless and the intersection of logic and creativity is where I like to spend my time. You can check out some of my work below, but be sure to visit my <a target="_blank" style="color:rgb(200,200,200);" href="http://github.com/hareeshnagaraj">github profile</a> for more details and code samples.</p>
+                            <p style="text-align:left;">I consider myself a composer - the process of creation, making something from nothing, is something that has always fascinated me. While learning to play guitar when I was younger, I always found myself writing my own songs more than anything else. Learning to code, I found the same appeal. To me, the similarities are boundless and the intersection of logic and creativity is where I like to spend my time. You can check out some of my work below, but be sure to visit my <a target="_blank" style="color:rgb(200,200,200);" href="http://github.com/hareeshnagaraj">github profile</a> for more details and code samples.</p>
                         </div>
                     </div>
                 </div>
@@ -110,8 +104,26 @@
                             </a>
                         </div>
                     </div>
-                    <div class="discover-img">
+                    <div class="discover-img" style="margin-top:55px;">
                         <div class="discover-img-inside"><img src="upload/tabdat.png" style="width:300px;margin-top:80px;margin:auto;"  alt=""></div>
+                    </div>
+                </div>
+                <!-- /.wrap -->
+            </div>
+            <div class="discover clearfix">
+                <div class="wrap">
+                    <div class="discover-content clearfix">
+                        <h2>stories</h2>
+                        <p>A storytelling feature for coversplash that allows users to create narratives using photos, videos, text and maps. Built using HTML5 editable attributes, and a ton of javascript.</p>
+                        <div class="discover-button clearfix">
+                            <a target="_blank" href="http://coversplash.com" class="button button">
+                                <span class="button-download-title">View On</span>
+                                <span class="button-download-subtitle">coversplash</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="discover-img" style="margin-top:105px;">
+                        <div class="discover-img-inside"><img src="upload/coversplash.png" style="width:500px;margin-top:80px;margin:auto;"  alt=""></div>
                     </div>
                 </div>
                 <!-- /.wrap -->
@@ -128,13 +140,19 @@
                             </a>
                         </div>
                     </div>
-                    <div class="discover-img">
-                        <div class="discover-img-inside"><img src="upload/mapme.png" style="width:570px;margin-top:50px;"  alt=""></div>
+                    <div class="discover-content clearfix">
+                        <h2>boysenberry</h2>
+                        <p>boysenberry is a lightweight version of the developer tools to check out the layout of a page, and inspect the relevant CSS without having to open your developer tools. boysenberry also adds shortcuts to copy style of an element, displays layout bounds of all page elements, and lets you switch between basic and computed style with a few simple shortcuts. </p>
+                        <div class="discover-button clearfix">
+                            <a target="_blank" href="https://chrome.google.com/webstore/detail/boysenberry/odddjldlndamcgopdfcnioipkbpcdphh" class="button button">
+                                <span class="button-download-title">View On</span>
+                                <span class="button-download-subtitle">Chrome Webstore</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- /.wrap -->
             </div>
-            <!-- /.discover clearfix -->
             <div class="video clearfix">
                 <div class="wrap">
                     <div class="video-title">More</div>
@@ -165,5 +183,16 @@
     <script src="js/library.js"></script>
     <script src="js/script.js"></script>
     <script src="js/retina.js"></script>
+    <script type="text/javascript">
+    function scroll(inputstring){
+    var offset = $(this).offset();
+        $('html, body').animate({scrollTop: $(inputstring).offset().top}, 1000);
+    }
+    $(document).ready(function(){
+        $("#more").click(function(){
+            scroll("#about");
+        })
+    });
+    </script>
 </body>
 </html>
